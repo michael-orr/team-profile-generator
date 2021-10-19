@@ -124,14 +124,16 @@ function addIntern() {
 function addEmployeeQuestion() {
     inquirer.prompt(addEmployee)
     .then((answer) =>{
-        switch(answer){
-        case (answer.employeeType === "Engineer"):
+        let type = answer.employeeType;
+        console.log(type)
+        switch(type){
+        case (type === "Engineer"):
         addEngineer();
         break;
-        case (answer.employeeType === "Intern"):
+        case (type === "Intern"):
         addIntern();
         break;
-        case (answer.employeeType === "Quit"):
+        case (type === "Quit"):
         }
     })
 };
