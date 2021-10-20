@@ -9,123 +9,88 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+
   <nav class="light-blue lighten-1 center-align">
-      <a id="logo-container" href="#">My Team</a>
-  </nav>
-  
-  <div class="container">
-    <div class="section">
-      <div class="row box-row">
-        <div class="col s12 m4 box">
-          <div class="icon-block">
-            <h2 class="light-blue-text"><i class="material-icons">flash_on</i></h2>
-            <h5>Speeds up development</h5>
-            <p class="light">Name: ${name}</p>
-          </div>
-        </div>
+  <a id="logo-container" href="#">My Team</a>
+</nav>
 
-        <div class="col s12 m4 box">
-          <div class="icon-block">
-            <h2 class="light-blue-text"><i class="material-icons">group</i></h2>
-            <h5>User Experience Focused</h5>
-            <p class="light">${name}</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4 box">
-          <div class="icon-block">
-            <h2 class="light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5>Easy to work with</h5>
-            <p class="light">Name: ${name}</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4 box">
-          <div class="icon-block">
-            <h2 class="light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5>Easy to work with</h5>
-            <p class="light">Name: ${name}</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4 box">
-          <div class="icon-block">
-            <h2 class="light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5>Easy to work with</h5>
-            <p class="light">Name: ${name}</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4 box">
-          <div class="icon-block">
-            <h2 class="light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5>Easy to work with</h5>
-            <p class="light">Name: ${name}</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4 box">
-          <div class="icon-block">
-            <h2 class="light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5>Easy to work with</h5>
-            <p class="light">Name: ${name}</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4 box">
-          <div class="icon-block">
-            <h2 class="light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5>Easy to work with</h5>
-            <p class="light">Name: ${name}</p>
-          </div>
-        </div>
-
+<div class="container">
+<div class="section">
+  <div class="row box-row">
+    <div class="col s12 m4 box">
+      <div class="icon-block">
+        <h2 class="light-blue-text"><i class="material-icons">sports_martial_arts</i></h2>
+        <h5>${team[0].name}</h5>
+        <p class="light">Role: ${team[0].getRole()}</p>
+        <p class="light">Office: ${team[0].officeNumber}</p>
+        <p class="light">ID: ${team[0].id}</p>
       </div>
     </div>
-    <br><br>
+
+    <div class="col s12 m4 box">
+      <div class="icon-block">
+        <h2 class="light-blue-text"><i class="material-icons">engineering</i></h2>
+        <h5>${team[1].name}</h5>
+        <p class="light"> Role: ${team[1].getRole()}</p>
+        <p class="light">Github: ${team[1].github}</p>
+        <p class="light">ID: ${team[1].id}</p>        
+      </div>
+    </div>
+
+    <div class="col s12 m4 box">
+      <div class="icon-block">
+        <h2 class="light-blue-text"><i class="material-icons">school</i></h2>
+        <h5>${team[2].name}</h5>
+        <p class="light"> Role: ${team[2].getRole()}</p>
+        <p class="light">School: ${team[2].school}</p>
+        <p class="light">ID: ${team[2].id}</p>       
+      </div>
+    </div>
+
+    <div class="col s12 m4 box">
+      <div class="icon-block">
+        <h2 class="light-blue-text"><i class="material-icons">school</i></h2>
+        <h5>${team[2].name}</h5>
+        <p class="light"> Role: ${team[2].getRole()}</p>
+        <p class="light">School: ${team[2].school}</p>
+        <p class="light">ID: ${team[2].id}</p>       
+      </div>
+    </div>
+
+    <div class="col s12 m4 box">
+      <div class="icon-block">
+        <h2 class="light-blue-text"><i class="material-icons">school</i></h2>
+        <h5>${team[2].name}</h5>
+        <p class="light"> Role: ${team[2].getRole()}</p>
+        <p class="light">School: ${team[2].school}</p>
+        <p class="light">ID: ${team[2].id}</p>       
+      </div>
+    </div>
   </div>
+</div>
+<br><br>
+</div>
 
-  <footer class="page-footer orange">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
+<footer class="page-footer orange">
+<div class="container">
+  <div class="row">
+    <div class="col l6 s12">
+      <h5 class="white-text">Company Bio</h5>
+      <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
-  </footer>
+  </div>
+</div>
+<div class="footer-copyright">
+  <div class="container">
+  This was made by Mike.
+  </div>
+</div>
+</footer>
 
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="materialize-js/materialize.js"></script>
-  <script src="materialize-js/init.js"></script>
-
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="materialize-js/materialize.js"></script>
+<script src="materialize-js/init.js"></script>
   </body>
 </html>

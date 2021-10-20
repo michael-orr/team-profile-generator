@@ -5,9 +5,21 @@ const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern");
 const Engineer = require("./lib/Engineer");
-
+const Team = require("./lib/Team");
+const generatehtml = require("./samplehtml");
+const team = [];
 
 const managerQuestions = [
+    {
+        type: "input",
+        message: "What is the name of the team?",
+        name: "teamName",
+    },
+    {
+        type: "input",
+        message: "What is the mission of this team?",
+        name: "missionStatement",
+    },
     {
         type: "input",
         message: "What is the team manager's name?",
@@ -94,58 +106,73 @@ const internQuestions = [
 
 
 function addEngineer() {
-    inquirer.prompt(engineerQuestions)
+    return inquirer.prompt(engineerQuestions)
     .then((answers) => {
-        console.log("add Engineer function is being called")
         const newEngineer = new Engineer(
-            answers.engineerID,
             answers.engineerName,
+            answers.engineerID,
             answers.engineerEmail,
             answers.engineerGithub)
+        team.push(newEngineer);
         addEmployeeQuestion();
     })
 }
 
 function addIntern() {
-    inquirer.prompt(internQuestions)
+    return inquirer.prompt(internQuestions)
     .then((answers) => {
-        console.log("add Intern function is being called")
         const newIntern = new Intern(
-            answers.internID,
             answers.internName,
+            answers.internID,
             answers.internEmail,
             answers.internSchool)
+        team.push(newIntern);
         addEmployeeQuestion();
     })
 }
 
+function renderTeam(team) {
+    console.log(team);
+    const fileName = `teamprofile.html`;
+    const teamProfile = generatehtml(team);
+    fs.writeFile(fileName, teamProfile, (err) =>
+    err ? console.error(err) : console.log('Success!')
+    );
+}
 
 
 function addEmployeeQuestion() {
-    inquirer.prompt(addEmployee)
+    return inquirer.prompt(addEmployee)
     .then((answer) =>{
-        let type = answer.employeeType;
-        console.log(type)
-        switch(type){
-        case (type === "Engineer"):
+        switch(answer.employeeType){
+        case "Engineer":
         addEngineer();
         break;
-        case (type === "Intern"):
+        case "Intern":
         addIntern();
         break;
-        case (type === "Quit"):
+        default:
+        renderTeam(team);
+        break;
         }
     })
 };
 
+
 function buildTeam() {
-    inquirer.prompt(managerQuestions)
+    return inquirer.prompt(managerQuestions)
     .then((answers) => {
+        const teamInfo = new Team(
+            answers.teamName,
+            answers.missionStatement
+        )
+        team.push(teamInfo);
         const newManager = new Manager(
-            answers.managerID,
             answers.managerName,
+            answers.managerID,
             answers.managerEmail,
             answers.managerOffice)
+        team.push(newManager);
         addEmployeeQuestion();
 
     })
