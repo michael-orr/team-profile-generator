@@ -133,7 +133,7 @@ function addIntern() {
 
 function renderTeam(team) {
     console.log(team);
-    const fileName = `teamprofile.html`;
+    const fileName = `index.html`;
     const teamProfile = generatehtml(team);
     fs.writeFile(fileName, teamProfile, (err) =>
     err ? console.error(err) : console.log('Success!')

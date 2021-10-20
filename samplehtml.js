@@ -67,7 +67,7 @@ const cards = team.map((employee) => generateCard(employee));
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>${team[0].teamName}</title>
+  <title>${team[0].teamName} Profile</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -75,7 +75,7 @@ const cards = team.map((employee) => generateCard(employee));
 <body>
 
   <nav class="light-blue lighten-1 center-align">
-  <a id="logo-container" href="#">My Team</a>
+  <a id="logo-container" href="#">${team[0].teamName}</a>
 </nav>
 
 <div class="container">
