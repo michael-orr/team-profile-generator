@@ -1,26 +1,20 @@
 function generateCard(employee){
-  console.log("SWITCH CASE TOP:",employee)
   switch(employee.getRole()) {
     case "Manager":
-      console.log("SWITCH CASE : Manager:",employee)
       return generateManagerCard(employee);
       break;
     case "Engineer":
-      console.log("SWITCH CASE :Engineer:",employee)
       return generateEngineerCard(employee);
       break;
     case "Intern":
-      console.log("SWITCH CASE :Intern:",employee)  
       return generateInternCard(employee);
       break;
       case "Team Info":
-      console.log("SWITCH CASE :Team Info:",employee)  
       break;
   }
 }
 
 function generateManagerCard(manager){
-  console.log("GENERATE MANAGER",manager)
   return `<div class="col s12 m4 box">
           <div class="icon-block">
           <h2 class="light-blue-text"><i class="material-icons">sports_martial_arts</i></h2>
@@ -33,7 +27,6 @@ function generateManagerCard(manager){
 }
 
 function generateEngineerCard(engineer){
-  console.log("GENERATE ENGINEER",engineer)
   return `<div class="col s12 m4 box">
   <div class="icon-block">
     <h2 class="light-blue-text"><i class="material-icons">engineering</i></h2>
@@ -46,7 +39,6 @@ function generateEngineerCard(engineer){
 }
 
 function generateInternCard(intern){
-  console.log("GENERATE INTERN",intern)
   return `    <div class="col s12 m4 box">
   <div class="icon-block">
     <h2 class="light-blue-text"><i class="material-icons">school</i></h2>
